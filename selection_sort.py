@@ -1,6 +1,8 @@
-import sys
+import time
 
-A = [64, 25, 12, 22, 11]
+A = list(map(int, input().split()))
+
+start_time = time.time()
 
 for i in range(len(A)):
 
@@ -12,6 +14,8 @@ for i in range(len(A)):
 
     A[i], A[min_idx] = A[min_idx], A[i]
 
-print("Sorted array")
-for i in range(len(A)):
-    print("%d" %A[i]),
+for i in A:
+    print(i),
+
+end_time = time.time()
+print("time:", end_time - start_time)
